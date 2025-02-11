@@ -1,0 +1,21 @@
+if status is-interactive
+
+    {{- if eq .chezmoi.os "linux" }}
+    if uwsm check may-start
+        exec uwsm start hyprland.desktop
+    end
+    {{- end }}
+
+    zoxide init --cmd cd fish | source
+    starship init fish | source
+
+    function __change_cursor_style --on-event fish_prompt
+        printf '\033[6 q'
+    end
+
+    # Set fish_greeting to `neofetch`:
+    function fish_greeting
+        fastfetch
+    end
+
+end

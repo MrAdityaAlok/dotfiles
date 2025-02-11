@@ -1,0 +1,9 @@
+README.md
+{{- if eq .chezmoi.os "android" }}
+.config/hypr
+.config/hyprpanel
+.config/waybar
+.config/uwsm
+.config/rofi
+.config/dunst
+{{- end }}
