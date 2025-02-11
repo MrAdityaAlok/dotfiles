@@ -1,7 +1,7 @@
 [user]
-	name = Aditya Alok
-	email = dev.aditya.alok@gmail.com
-	signingKey = 345AE134142077D8
+	name = {{ .name }}
+	email = {{ .email }}
+	signingKey = {{ .gitSigningKey }}
 [commit]
   gpgsign = true
 [push]
