@@ -1,0 +1,89 @@
+# WARNING: Some applications do not support screen capture with 10 bit enabled.
+monitor= , highrr, auto, auto, bitdepth, 10
+
+$config = ~/.config/hypr/config
+
+source = $config/execs.conf
+source = $config/plugins.conf
+source = $config/binds.conf
+source = $config/rules.conf
+source = $config/animations.conf
+
+input {
+  kb_layout = us
+  kb_variant =
+  kb_model =
+  kb_options =
+  kb_rules =
+
+  numlock_by_default = true
+
+  follow_mouse = 1
+
+  touchpad {
+    natural_scroll = yes
+  }
+
+  sensitivity = 0 # -1.0 to 1.0, 0 means no modification.
+}
+
+general {
+  gaps_in = 3
+  gaps_out = 5
+  border_size = 0
+  allow_tearing = false
+  layout = dwindle
+}
+
+decoration {
+  rounding = 10
+  rounding_power = 4.0
+  # dim_inactive = true
+  # shadow_range = 4
+  # shadow_render_power = 3
+  # col.shadow = rgba(1a1a1aee)
+
+  blur {
+    enabled = true
+    size = 4
+    passes = 4
+    brightness = 0.85
+    noise = 0.02
+    contrast = 1.5
+    vibrancy = 0.2
+    ignore_opacity = true
+    popups = true
+    special = false
+    xray = false
+    # popups_ignorealpha = 0
+    }
+}
+
+# debug:disable_logs = false
+
+dwindle {
+  pseudotile = yes
+  preserve_split = yes
+  smart_split = true
+}
+
+gestures {
+  workspace_swipe = on
+}
+
+misc {
+  vfr = true
+  force_default_wallpaper = 0
+  animate_manual_resizes = true
+  disable_hyprland_logo = true
+  focus_on_activate = true
+  font_family = {{ .theme.settings.font.system.regular }}
+}
+
+cursor {
+  inactive_timeout =  5
+}
+
+xwayland {
+  force_zero_scaling = true
+}

@@ -1,0 +1,18 @@
+[Settings]
+# Theming:
+gtk-application-prefer-dark-theme={{ .theme.settings.gtk.colorscheme }}
+gtk-theme-name={{ .theme.settings.gtk.theme }}
+gtk-icon-theme-name={{ index .theme.settings "icon-theme" }}
+gtk-cursor-theme-name={{ .theme.settings.cursor.x11 }}
+gtk-cursor-theme-size={{ .theme.settings.cursor.size }}
+# Fonts:
+gtk-font-name={{ .theme.settings.font.system.regular }} {{ .theme.settings.font.system.size }}
+# Feedback and event sounds:
+gtk-enable-event-sounds={{ index .theme.settings.gtk "event-sounds" }}
+gtk-enable-input-feedback-sounds={{ index .theme.settings.gtk "input-feedback-sounds" }}
+# Font rendering:
+gtk-xft-dpi={{ .theme.settings.gtk.dpi }}
+gtk-xft-rgba={{ index .theme.settings.gtk "rgba-order" }}
+gtk-xft-hinting={{ .theme.settings.gtk.hinting }}
+gtk-xft-antialias={{ .theme.settings.gtk.antialias }}
+gtk-xft-hintstyle={{ .theme.settings.gtk.hintstyle }}

@@ -1,13 +1,13 @@
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
-	signingKey = {{ .gitSigningKey }}
+	signingKey = 345AE134142077D8
 [commit]
   gpgsign = true
 [push]
   autoSetupRemote = true
 [core]
-	editor = nvim
+	editor = {{ .editor }}
 	excludesFile = ~/.gitignore
 [init]
 	defaultBranch = main

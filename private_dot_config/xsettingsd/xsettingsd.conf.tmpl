@@ -1,0 +1,9 @@
+Net/ThemeName {{ .theme.settings.gtk.theme | quote }}
+Net/IconThemeName {{ index .theme.settings "icon-theme" | quote }}
+Gtk/CursorThemeName {{ .theme.settings.cursor.x11 | quote }}
+Net/EnableEventSounds {{ index .theme.settings.gtk "event-sounds" }}
+EnableInputFeedbackSounds {{ index .theme.settings.gtk "input-feedback-sounds" }}
+Xft/Antialias {{ .theme.settings.gtk.antialias }}
+Xft/Hinting {{ .theme.settings.gtk.hinting }}
+Xft/HintStyle {{ .theme.settings.gtk.hintstyle | quote }}
+Xft/RGBA {{ index .theme.settings.gtk "rgba-order" | quote }}

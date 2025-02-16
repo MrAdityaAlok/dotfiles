@@ -1,6 +1,14 @@
-# ~/.config/chezmoi/chezmoi.toml
+{{- $email := promptStringOnce . "email" "Your git email" -}}
+{{- $name := promptStringOnce . "name" "Your git username (full name)" -}}
+{{- $termuxEmail := promptStringOnce . "termuxEmail" "Your git email (for Termux)" -}}
+
+{{- $editor := (eq .chezmoi.os "android") | ternary "nvim" "neovide" -}}
 
 [data]
-  name = {{ promptString "git username" | quote }}
-  email = {{ promptString "git email address" | quote }}
-  gitSigningKey = {{ promptString "git signing key" | quote }}
+  name = {{ $name | quote }}
+  email = {{ $email | quote }}
+  termuxEmail = {{ $termuxEmail | quote }}
+  editor = {{ $editor | quote }}
+  currentWallpaper = {{ joinPath .chezmoi.homeDir ".cache/currentWallpaper" | quote }} # This is a link to current wallpaper.
+ 
+# TODO: Make backlight configurable for `hypridle`.

@@ -1,9 +1,16 @@
 README.md
-{{- if eq .chezmoi.os "android" }}
+{{ if eq .chezmoi.os "android" }}
 .config/hypr
-.config/hyprpanel
 .config/waybar
 .config/uwsm
 .config/rofi
 .config/dunst
-{{- end }}
+.config/kitty
+.config/gtk-3.0
+.config/gtk-4.0
+.config/rofi
+.config/xsettingsd
+.chezmoiscripts/001-systemd-services.sh
+.chezmoiscripts/setup-docker.sh
+.chezmoiscripts/gsettings.sh
+{{ end }}

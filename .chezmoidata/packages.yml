@@ -1,0 +1,69 @@
+packages:
+  linux:
+    arch:
+      yay:
+        - clipse-bin
+        - hyprshot
+        - matugen-bin
+        - zen-browser-bin
+        - localsend
+        - stremio
+        - exercism-bin
+      pacman:
+        # Core:
+        - gnupg
+        - openssh
+        - curl
+        # System related:
+        - intel-media-driver
+        - intel-ucode
+        # Hyprland related:
+        - uwsm
+        - hyprland
+        - hypridle
+        - hyprlock
+        - hyprpolkitagent
+        - hyprsunset
+        - xdg-desktop-portal-hyprland
+        - xdg-desktop-portal-gtk
+        - qt5-wayland
+        - qt6-wayland
+        - rofi-wayland
+        - dunst
+        - waybar
+        - brightnessctl
+        - swww
+        # Essential desktop applications:
+        - nautilus
+        - feh
+        - btop
+        # Terminal and related:
+        - kitty
+        - fish
+        - starship
+        - zoxide
+        - eza
+        - fastfetch
+        # Development related:
+        - git
+        - wget
+        - neovim
+        - neovide
+        - docker
+        - docker-compose
+        - nodejs
+        - npm
+        - go
+        - python
+        - python-pip
+        - python-pipx
+        - github-cli
+        - android-tools
+  android:
+    termux:
+      pkg:
+        - gh
+        - curl
+        - wget
+        - git
+        - python

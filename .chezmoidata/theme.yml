@@ -1,0 +1,62 @@
+theme:
+  pkgs:
+    linux:
+      arch:
+        yay:
+          - otf-ibm-flex
+          - rose-pine-hyprcursor
+          - rose-pine-cursor
+        pacman:
+          - otf-codenewroman-nerd
+          - ttf-iosevka-nerd
+          - papirus-icon-theme
+          - adw-gtk-theme
+  settings:
+    font:
+      system:
+        size: 11
+        regular: "IBM Plex Sans"
+        monospace: "IBM Plex Mono weight=450"
+      coding:
+        size: 11.5
+        regular: "Iosevka Nerd Font"
+      waybar:
+        size: 12px
+        name: "CodeNewRoman Nerd Font Propo"
+        weight: 800
+      rofi:
+        name: "CodeNewRoman Nerd Font Propo"
+        size: 11
+    icon-theme: Papirus
+    cursor:
+      hyprcursor: rose-pine-hyprcursor
+      # GTK doesn't support server side cursor rendering. It will fallback to x11 settings.
+      # See: https://wiki.hyprland.org/Hypr-Ecosystem/hyprcursor/
+      x11: BreezeX-RosePine-Linux
+      size: 24
+
+    gtk:
+      theme: adw-gtk3
+      colorscheme: 1
+      event-sounds: 1
+      input-feedback-sounds: 0
+      dpi: -1
+      antialias: 1
+      hinting: 1
+      hintstyle: hintslight
+      rgba-order: rgb
+      # `gsettings` specific: # WARNING: Update same keys from above too when changing below.
+      color-scheme: prefer-dark
+      font-antialiasing: grayscale
+      font-hinting: slight
+      button-layout: ":" # Disables maximize, minimize, close and menu buttons.
+
+    qt:
+      theme: gtk3
+      auto-screen-scale-factor: 1
+      disable-windowdecoration: 1
+
+    matugen:
+      scheme: scheme-tonal-spot
+      contrast: 0
+      mode: dark

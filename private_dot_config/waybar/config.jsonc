@@ -1,11 +1,11 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   // "height": 30,
   "spacing": 4,
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
+    "hyprland/workspaces"
+    // "hyprland/window"
   ],
   "modules-center": [
     "clock",
@@ -19,9 +19,9 @@
     "network",
     // "cpu",
     "memory",
-    "battery",
-    "tray",
-    "custom/power"
+    "battery"
+    // "tray"
+    // "custom/power"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -50,7 +50,7 @@
   },
   "custom/calendar": {
     "format": "",
-    "on-click": "swaync-client -t -sw",
+    // "on-click": "swaync-client -t -sw",
     "tooltip": false
   },
   "idle_inhibitor": {
@@ -69,12 +69,12 @@
     "on-scroll-down": "~/.config/waybar/scripts/night-light.sh decrease",
     "tooltip": true
   },
-  "cpu": {
-    "format": "󰻠 {usage}%",
-    "interval": 1,
-    "tooltip": true,
-    "tooltip-format": "󰻠 Usage: {usage}%\n Load: {load}\n Freq: {avg_frequency}GHz"
-  },
+  // "cpu": {
+  //   "format": "󰻠 {usage}%",
+  //   "interval": 1,
+  //   "tooltip": true,
+  //   "tooltip-format": "󰻠 Usage: {usage}%\n Load: {load}\n Freq: {avg_frequency}GHz"
+  // },
   "memory": {
     "format": "󰍛 {percentage}%",
     "interval": 1,
@@ -150,10 +150,10 @@
   "tray": {
     "icon-size": 18,
     "spacing": 10
-  },
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh",
-    "tooltip": false
   }
+  // "custom/power": {
+  //   "format": "⏻",
+  //   "on-click": "~/.config/waybar/scripts/power-menu.sh",
+  //   "tooltip": false
+  // }
 }

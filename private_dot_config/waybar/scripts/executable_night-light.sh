@@ -4,6 +4,11 @@ CONFIG_FILE="$HOME/.config/waybar/scripts/.night-light"
 
 temp="$(cat "$CONFIG_FILE")"
 
+# Default value:
+if test -z "$temp"; then
+  temp=4000
+fi
+
 is_running() {
   pgrep -x "hyprsunset" >/dev/null
   return $?
@@ -24,6 +29,16 @@ restart_hyprsunset() {
   fi
 }
 
+mod() {
+  local v="$1"
+  if ((v > 20000)); then
+    v=20000
+  elif ((v < 1000)); then
+    v=1000
+  fi
+  echo "$v"
+}
+
 case "$1" in
 "toggle")
   if is_running; then
@@ -33,11 +48,13 @@ case "$1" in
   fi
   ;;
 "increase")
-  echo $((temp + 500)) >"$CONFIG_FILE"
+  temp=$(mod $((temp + 500)))
+  echo "$temp" >"$CONFIG_FILE"
   restart_hyprsunset
   ;;
 "decrease")
-  echo $((temp - 500)) >"$CONFIG_FILE"
+  temp=$(mod $((temp - 500)))
+  echo "$temp" >"$CONFIG_FILE"
   restart_hyprsunset
   ;;
 "status")

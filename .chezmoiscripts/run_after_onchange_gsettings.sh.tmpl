@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+echo "Exporting gtk schemas ..."
+
+di_schema="org.gnome.desktop.interface"
+
+# Theme
+gsettings set "$di_schema" color-scheme {{ index .theme.settings.gtk "color-scheme" | quote }}
+gsettings set "$di_schema" gtk-theme {{ .theme.settings.gtk.theme | quote }}
+gsettings set "$di_schema" icon-theme {{ index .theme.settings "icon-theme" | quote }}
+gsettings set "$di_schema" cursor-theme {{ .theme.settings.cursor.x11 | quote }}
+gsettings set "$di_schema" cursor-size {{ .theme.settings.cursor.size }}
+
+# Fonts:
+gsettings set "$di_schema" font-name {{ .theme.settings.font.system.regular | quote }}
+gsettings set "$di_schema" document-font-name {{ .theme.settings.font.system.regular | quote }}
+gsettings set "$di_schema" monospace-font-name {{ .theme.settings.font.system.monospace | quote }}
+# Preference to indicate whether font rendering should follow the low-level `font-hinting`
+# and `font-antialiasing` and `font-rgba-order` settings, or take environmental factors
+# such as screen resolution and scaling into account.
+# Possible values are: "manual" for respecting the low-level settings,
+# or "automatic" for letting the toolkit make its own decisions.
+gsettings set "$di_schema" font-rendering "manual"
+gsettings set "$di_schema" font-antialiasing {{ index .theme.settings.gtk "font-antialiasing" | quote }}
+gsettings set "$di_schema" font-hinting {{ index .theme.settings.gtk "font-hinting" | quote }}
+gsettings set "$di_schema" font-rgba-order {{ index .theme.settings.gtk "rgba-order" | quote }}
+
+# Window manager preferences:
+wm_schema="org.gnome.desktop.wm.preferences"
+gsettings set "$wm_schema" button-layout {{ index .theme.settings.gtk "button-layout" | quote }}

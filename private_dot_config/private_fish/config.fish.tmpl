@@ -1,26 +1,19 @@
 if status is-interactive
 
-    {{- if eq .chezmoi.os "linux" }}
+    {{ if eq .chezmoi.os "linux" -}}
     if uwsm check may-start
-        exec uwsm start hyprland.desktop
+        exec uwsm start -S hyprland.desktop # '-S': Use 'Slice'
     end
     {{- end }}
 
     zoxide init --cmd cd fish | source
     starship init fish | source
 
-    function __change_cursor_style --on-event fish_prompt
-        printf '\033[6 q'
-    end
-
-    # Set fish_greeting to `neofetch`:
-    function fish_greeting
-        fastfetch
-    end
-
     gpgconf --launch gpg-agent # Start or re-use a gpg-agent
     set -e SSH_AGENT_PID
     set -gx SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
     gpg-connect-agent updatestartuptty /bye &>/dev/null
 
+    # Set theme using matugen: (Using starship currently)
+    fish_config theme choose Matugen
 end
