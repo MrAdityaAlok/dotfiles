@@ -1,0 +1,62 @@
+theme:
+  pkgs:
+    linux:
+      arch:
+        yay:
+          - otf-ibm-flex
+          - bibata-cursor-git
+        pacman:
+          - otf-codenewroman-nerd
+          - ttf-iosevka-nerd
+          - papirus-icon-theme
+          - adw-gtk-theme
+
+  settings:
+    font:
+      system:
+        size: 11
+        regular: "IBM Plex Sans"
+        monospace: "IBM Plex Mono weight=450"
+      coding:
+        size: 11.5
+        regular: "Iosevka Nerd Font"
+      waybar:
+        size: 13px
+        name: "CodeNewRoman Nerd Font Propo"
+        weight: 800
+      rofi:
+        name: "CodeNewRoman Nerd Font Propo"
+        size: 11
+    icon-theme: Papirus
+    cursor:
+      theme: Bibata-Modern-Ice
+      size: 22
+
+    gtk:
+      theme: adw-gtk3
+      colorscheme: 1
+      event-sounds: 1
+      input-feedback-sounds: 0
+      dpi: -1
+      antialias: 1
+      hinting: 1
+      hintstyle: hintslight
+      rgba-order: rgb
+      # `gsettings` specific: # WARNING: Update same keys from above too when changing below.
+      color-scheme: prefer-dark
+      font-antialiasing: grayscale
+      font-hinting: slight
+      button-layout: ":" # Disables maximize, minimize, close and menu buttons.
+
+    qt:
+      theme: gtk3
+      auto-screen-scale-factor: 1
+      disable-windowdecoration: 1
+
+    matugen:
+      # NOTE: Wallpaper path is set in `.chezmoi.toml`
+      template-path: ~/.config/matugen/templates
+      output-path: ~/.cache/matugen/colors
+      scheme: scheme-tonal-spot
+      contrast: 0.5
+      mode: dark

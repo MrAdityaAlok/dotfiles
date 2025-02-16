@@ -1,0 +1,31 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "random" , "--transition-fps", "60"]
+set = true
+
+{{- $templatePath := index .theme.settings.matugen "template-path" -}}
+{{- $outputPath := index .theme.settings.matugen "output-path" }}
+
+[templates.kitty]
+input_path = "{{ $templatePath }}/kitty.conf"
+output_path = "{{ $outputPath }}/kitty.conf"
+
+[templates.rofi]
+input_path = "{{ $templatePath }}/rofi.rasi"
+output_path = "{{ $outputPath }}/rofi.rasi"
+
+[templates.starship]
+input_path = "{{ $templatePath }}/starship.toml"
+output_path = "{{ $outputPath }}/starship.toml"
+
+# [templates.fish]
+# input_path = "{{ $templatePath }}/fish.theme"
+# output_path = "~/.config/fish/themes/Matugen.theme"
+
+[templates.gtk3]
+input_path = "{{ $templatePath }}/gtk3.css"
+output_path = "{{ $outputPath }}/gtk3.css"
+
+[templates.gtk4]
+input_path = "{{ $templatePath }}/gtk3.css"
+output_path = "{{ $outputPath }}/gtk4.css"

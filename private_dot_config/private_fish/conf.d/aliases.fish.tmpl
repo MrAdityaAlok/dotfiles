@@ -10,6 +10,6 @@ alias rm "rm -i"
 alias mv "mv -i"
 alias cp "cp -i"
 
-if type -q neovide
-    alias vi {{ if eq .chezmoi.os "linux" -}} "neovide --fork" {{- else -}} nvim {{- end }}
-end
+{{ $editor := eq .editor "neovide" | ternary "neovide --fork" .editor }}
+
+alias vi {{ $editor | quote }}
