@@ -4,6 +4,12 @@
 
 {{- $editor := (eq .chezmoi.os "android") | ternary "nvim" "neovide" -}}
 
+
+encryption = "age"
+[age]
+  identity = "~/.config/chezmoi/key.txt"
+  recipient = "age1p0pxw50tf3qq0kcq7377mkuxjsykk5gq8r7tkgj0j52a60hyc97qwd4094"
+
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}
