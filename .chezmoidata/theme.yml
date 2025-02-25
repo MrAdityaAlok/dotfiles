@@ -3,7 +3,7 @@ theme:
     linux:
       arch:
         yay:
-          - otf-ibm-flex
+          - otf-ibm-plex
           - rose-pine-hyprcursor
           - rose-pine-cursor
         pacman:

@@ -16,7 +16,7 @@ packages:
         - curl
         # System related:
         - intel-media-driver
-        - intel-ucode
+        - gvfs-mtp
         # Hyprland related:
         - uwsm
         - hyprland
@@ -35,7 +35,6 @@ packages:
         - swww
         # Essential desktop applications:
         - nautilus
-        - feh
         - btop
         # Terminal and related:
         - kitty
