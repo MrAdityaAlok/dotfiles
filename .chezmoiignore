@@ -1,4 +1,5 @@
 README.md
+assets/
 {{ if eq .chezmoi.os "android" }}
 .config/hypr
 .config/waybar
