@@ -14,7 +14,7 @@ gsettings set "$di_schema" cursor-theme {{ .theme.settings.cursor.x11 | quote }}
 gsettings set "$di_schema" cursor-size {{ .theme.settings.cursor.size }}
 
 # Fonts:
-gsettings set "$di_schema" font-name {{ .theme.settings.font.system.regular | quote }}
+gsettings set "$di_schema" font-name "{{ .theme.settings.font.system.regular }} {{ .theme.settings.font.system.size }}"
 gsettings set "$di_schema" document-font-name {{ .theme.settings.font.system.regular | quote }}
 gsettings set "$di_schema" monospace-font-name {{ .theme.settings.font.system.monospace | quote }}
 # Preference to indicate whether font rendering should follow the low-level `font-hinting`
