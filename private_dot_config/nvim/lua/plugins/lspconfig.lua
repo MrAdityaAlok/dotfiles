@@ -5,6 +5,7 @@ return {
     ---@class PluginLspOpts
     opts = {
       servers = {
+        clangd = {},
         bashls = {},
         hyprls = {},
         qmlls = {
