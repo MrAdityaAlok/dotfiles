@@ -6,7 +6,6 @@ packages:
         - hyprshot
         - matugen-bin
         - zen-browser-bin
-        - localsend
         - stremio
         - exercism-bin
       pacman:
@@ -15,7 +14,6 @@ packages:
         - openssh
         - curl
         # System related:
-        - intel-media-driver
         - gvfs-mtp
         # Hyprland related:
         - uwsm
