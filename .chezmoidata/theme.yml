@@ -18,15 +18,15 @@ theme:
         regular: "IBM Plex Sans"
         monospace: "IBM Plex Mono weight=450"
       coding:
-        size: 11.5
+        size: 12
         regular: "Iosevka Nerd Font"
       waybar:
-        size: 12px
+        size: 11px
         name: "CodeNewRoman Nerd Font Propo"
-        weight: 800
+        weight: 900
       rofi:
         name: "CodeNewRoman Nerd Font Propo"
-        size: 11
+        size: 12
     icon-theme: Papirus
     cursor:
       hyprcursor: rose-pine-hyprcursor
