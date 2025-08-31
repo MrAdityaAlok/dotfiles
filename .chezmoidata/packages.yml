@@ -46,11 +46,11 @@ packages:
         - wget
         - neovim
         - neovide
-        - docker
-        - docker-compose
+        # - docker
+        # - docker-compose
         - nodejs
         - npm
-        - go
+        # - go
         - python
         - python-pip
         - python-pipx

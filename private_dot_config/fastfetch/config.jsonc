@@ -73,7 +73,7 @@
     },
     {
       "type": "gpu",
-      "format": "{1} {2} @ {12} GHz",
+      "format": "{1} {2}",
       "key": " ├ 󰢮 ",
       "keyColor": "33",
     },

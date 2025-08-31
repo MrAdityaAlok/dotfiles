@@ -1,7 +1,10 @@
 {
   "layer": "bottom",
-  "position": "bottom",
+  "position": "top",
   // "height": 30,
+  "margin-left": 5,
+  "margin-right": 5,
+  "margin-top": 5,
   "spacing": 4,
   "modules-left": [
     "hyprland/workspaces"
@@ -19,8 +22,8 @@
     "network",
     // "cpu",
     "memory",
-    "battery"
-    // "tray"
+    "battery",
+    "tray"
     // "custom/power"
   ],
   "hyprland/workspaces": {
@@ -145,7 +148,7 @@
       ]
     },
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol"
+    // "on-click-right": "pavucontrol"
   },
   "tray": {
     "icon-size": 18,

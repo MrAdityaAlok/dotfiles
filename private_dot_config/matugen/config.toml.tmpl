@@ -36,4 +36,9 @@ output_path = "~/.config/hypr/colors/hyprlock.conf"
 [templates.waybar]
 input_path = "{{ $templatePath }}/waybar.css"
 output_path = "~/.config/waybar/colors.css"
-post_hook = "pkill -SIGUSR2 waybar"
+post_hook = "pkill -SIGUSR2 waybar || :"
+
+[templates.cava]
+input_path = '{{ $templatePath }}/cava.ini'
+output_path = '~/.config/cava/config'
+post_hook = "pkill -USR1 cava ||:"

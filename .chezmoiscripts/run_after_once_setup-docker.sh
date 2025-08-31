@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -eufo pipefail
-
+exit 0
 if ! command -v docker &>/dev/null; then
   exit
 fi

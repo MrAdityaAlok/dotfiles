@@ -2,6 +2,8 @@
 
 set -eufo pipefail
 
+exit 0
+
 if [[ "$SHELL" =~ .*fish$ ]]; then
   exit 0
 fi

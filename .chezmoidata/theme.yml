@@ -3,7 +3,7 @@ theme:
     linux:
       arch:
         yay:
-          - otf-ibm-plex
+          # - otf-ibm-plex
           - rose-pine-hyprcursor
           - rose-pine-cursor
         pacman:
@@ -15,13 +15,13 @@ theme:
     font:
       system:
         size: 11
-        regular: "IBM Plex Sans"
-        monospace: "IBM Plex Mono weight=450"
+        regular: "Adwaita Sans"
+        monospace: "Adwaita Mono"
       coding:
-        size: 12
+        size: 13
         regular: "Iosevka Nerd Font"
       waybar:
-        size: 11px
+        size: 14px
         name: "CodeNewRoman Nerd Font Propo"
         weight: 900
       rofi:
