@@ -3,7 +3,6 @@ theme:
     linux:
       arch:
         yay:
-          # - otf-ibm-plex
           - rose-pine-hyprcursor
           - rose-pine-cursor
         pacman:
@@ -36,7 +35,7 @@ theme:
       size: 24
 
     gtk:
-      theme: adw-gtk3
+      theme: adw-gtk3-dark
       colorscheme: 1
       event-sounds: 1
       input-feedback-sounds: 0
@@ -60,3 +59,4 @@ theme:
       scheme: scheme-tonal-spot
       contrast: 0
       mode: dark
+      resize-filter: gaussian # nearest, triangle, catmull-rom, gaussian, lanczos3

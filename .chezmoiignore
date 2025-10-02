@@ -6,7 +6,7 @@ assets/
 .config/uwsm
 .config/rofi
 .config/dunst
-.config/kitty
+.config/foot
 .config/gtk-3.0
 .config/gtk-4.0
 .config/rofi

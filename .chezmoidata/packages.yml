@@ -3,10 +3,7 @@ packages:
     arch:
       yay:
         - clipse-bin
-        - hyprshot
         - matugen-bin
-        - zen-browser-bin
-        - stremio
         - exercism-bin
       pacman:
         # Core:
@@ -22,6 +19,7 @@ packages:
         - hyprlock
         - hyprpolkitagent
         - hyprsunset
+        - hyprshot
         - xdg-desktop-portal-hyprland
         - xdg-desktop-portal-gtk
         - qt5-wayland
@@ -34,8 +32,9 @@ packages:
         # Essential desktop applications:
         - nautilus
         - btop
+        - zen-browser-bin
         # Terminal and related:
-        - kitty
+        - foot
         - fish
         - starship
         - zoxide
@@ -46,11 +45,8 @@ packages:
         - wget
         - neovim
         - neovide
-        # - docker
-        # - docker-compose
         - nodejs
         - npm
-        # - go
         - python
         - python-pip
         - python-pipx

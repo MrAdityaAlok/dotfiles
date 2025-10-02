@@ -1,31 +1,31 @@
 {
-  "layer": "bottom",
+  "layer": "top",
   "position": "top",
-  // "height": 30,
   "margin-left": 5,
   "margin-right": 5,
   "margin-top": 5,
   "spacing": 4,
+ 
   "modules-left": [
     "hyprland/workspaces"
-    // "hyprland/window"
   ],
+  
   "modules-center": [
     "clock",
     "custom/calendar"
   ],
+  
   "modules-right": [
     "idle_inhibitor",
     "custom/night-light",
     "bluetooth",
     "pulseaudio",
     "network",
-    // "cpu",
     "memory",
     "battery",
     "tray"
-    // "custom/power"
   ],
+
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -46,16 +46,19 @@
       "default": ""
     }
   },
+
   "clock": {
     "format": " {:%I:%M %p | %b %d}",
     "tooltip": true,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
+  
   "custom/calendar": {
     "format": "",
     // "on-click": "swaync-client -t -sw",
     "tooltip": false
   },
+  
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -63,6 +66,7 @@
       "deactivated": ""
     }
   },
+  
   "custom/night-light": {
     "exec": "~/.config/waybar/scripts/night-light.sh status",
     "return-type": "json",
@@ -72,18 +76,21 @@
     "on-scroll-down": "~/.config/waybar/scripts/night-light.sh decrease",
     "tooltip": true
   },
+ 
   // "cpu": {
   //   "format": "󰻠 {usage}%",
   //   "interval": 1,
   //   "tooltip": true,
   //   "tooltip-format": "󰻠 Usage: {usage}%\n Load: {load}\n Freq: {avg_frequency}GHz"
   // },
+  
   "memory": {
     "format": "󰍛 {percentage}%",
     "interval": 1,
     "tooltip": true,
     "tooltip-format": "󰍛 Used: {used:0.1f}GB/{total:0.1f}GB\n󰍛 Swap: {swapUsed:0.1f}GB/{swapTotal:0.1f}GB"
   },
+  
   "battery": {
     "states": {
       "warning": 30,
@@ -105,6 +112,7 @@
       "󰁹"
     ]
   },
+  
   "bluetooth": {
     "format": "󰂯 {status}",
     "format-disabled": "󰂲",
@@ -114,8 +122,9 @@
     "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
     "on-click": "bluetoothctl power toggle",
-    "on-click-right": "blueman-manager"
+    // "on-click-right": "blueman-manager"
   },
+  
   "network": {
     "format": "{icon} {bandwidthDownBytes}",
     "format-disconnected": "󰖪",
@@ -126,8 +135,9 @@
     },
     "tooltip-format": "Connected to {essid}\nIP: {ipaddr}",
     "interval": 1,
-    "on-click-right": "nm-applet"
+    // "on-click-right": "nm-applet"
   },
+  
   "pulseaudio": {
     "format": "{icon} {volume}%{format_source}",
     "format-bluetooth": "󰂰 {volume}%{format_source}",
@@ -150,13 +160,10 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     // "on-click-right": "pavucontrol"
   },
+  
   "tray": {
     "icon-size": 18,
     "spacing": 10
   }
-  // "custom/power": {
-  //   "format": "⏻",
-  //   "on-click": "~/.config/waybar/scripts/power-menu.sh",
-  //   "tooltip": false
-  // }
+  
 }

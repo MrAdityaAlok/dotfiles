@@ -1,5 +1,17 @@
-# WARNING: Some applications do not support screen capture with 10 bit enabled.
-monitor= , highrr, auto, auto, bitdepth, 10
+monitorv2 {
+  output =
+  mode = highrr
+  position = auto
+  scale = auto
+  bitdepth = 10
+  # cm = hdr
+  supports_wide_color = 1
+  supports_hdr = 1
+  # sdr_min_luminance = 0.005
+  # sdrbrightness = 1.2
+  # sdrsaturation = 1.3
+  # vrr = 1
+}
 
 $config = ~/.config/hypr/config
 
@@ -8,6 +20,7 @@ source = $config/execs.conf
 source = $config/plugins.conf
 source = $config/binds.conf
 source = $config/rules.conf
+source = $config/gestures.conf
 source = $config/animations.conf
 
 input {
@@ -50,9 +63,9 @@ decoration {
     enabled = true
     size = 2
     passes = 5
-    brightness = 0.75
+    brightness = 0.45
     noise = 0.02
-    contrast = 1.5
+    contrast = 1.0
     vibrancy = 0.2
     ignore_opacity = true
     popups = true
@@ -67,10 +80,6 @@ dwindle {
   pseudotile = yes
   preserve_split = yes
   smart_split = true
-}
-
-gestures {
-  workspace_swipe = on
 }
 
 misc {

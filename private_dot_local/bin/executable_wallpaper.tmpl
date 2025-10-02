@@ -27,6 +27,9 @@ info "Running matugen ..."
 if ! matugen image "$wallpaper_path" \
   -t {{ .theme.settings.matugen.scheme }} \
   -m {{ .theme.settings.matugen.mode }} \
+  -r {{ index .theme.settings.matugen "resize-filter" }} \
   --contrast {{ .theme.settings.matugen.contrast }}; then
   error "Failed to run matugen"
 fi
+
+info "Done."

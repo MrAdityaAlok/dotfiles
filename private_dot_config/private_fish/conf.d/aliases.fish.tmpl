@@ -9,7 +9,3 @@ end
 alias rm "rm -i"
 alias mv "mv -i"
 alias cp "cp -i"
-
-{{ $editor := eq .editor "neovide" | ternary "neovide --fork" .editor }}
-
-alias vi {{ $editor | quote }}

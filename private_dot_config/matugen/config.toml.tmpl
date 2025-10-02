@@ -5,10 +5,6 @@ set = true
 
 {{- $templatePath := "~/.config/matugen/templates" }}
 
-[templates.kitty]
-input_path = "{{ $templatePath }}/kitty.conf"
-output_path = "~/.config/kitty/colors.conf"
-
 [templates.rofi]
 input_path = "{{ $templatePath }}/rofi.rasi"
 output_path = "~/.config/rofi/colors.rasi"
@@ -36,9 +32,17 @@ output_path = "~/.config/hypr/colors/hyprlock.conf"
 [templates.waybar]
 input_path = "{{ $templatePath }}/waybar.css"
 output_path = "~/.config/waybar/colors.css"
-post_hook = "pkill -SIGUSR2 waybar || :"
+post_hook = "pkill -SIGUSR2 waybar"
 
 [templates.cava]
 input_path = '{{ $templatePath }}/cava.ini'
 output_path = '~/.config/cava/config'
-post_hook = "pkill -USR1 cava ||:"
+post_hook = "pkill -USR1 cava || :"
+
+[templates.dunst]
+input_path = '{{ $templatePath }}/dunstrc'
+output_path = '~/.config/dunst/dunstrc'
+
+[templates.btop]
+input_path = '{{ $templatePath }}/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'

@@ -5,7 +5,7 @@ set -eufo pipefail
 # os.osRelease isn't available on Android:
 # chezmoi:template:missing-key="invalid"
 
-{{ if eq .chezmoi.osRelease.idLike "arch" }}
+{{ if eq .chezmoi.osRelease.id "cachyos" }}
 
 echo "Installing Arch packages ..."
 sudo pacman -Syu --needed {{ range .packages.linux.arch.pacman }} {{ . }} {{ end }} {{ range .theme.pkgs.linux.arch.pacman }} {{ . }} {{ end }}

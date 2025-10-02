@@ -1,0 +1,33 @@
+[global]
+monitor = 0
+follow = none
+
+width = (100, 300)
+height = (50, 200)
+offset = (10, 20)
+frame_width = 2
+
+sort = yes
+
+font = "{{ .theme.settings.font.system.regular }} {{ .theme.settings.font.system.size }}"
+
+icon_theme = "{{ index .theme.settings "icon-theme" }}"
+enable_recursive_icon_lookup = true
+
+corner_radius = 10
+
+# separator_color= "#a08d87"
+
+markup = full
+background = "#11111b80"
+frame_color = {{ "{{ colors.primary.default.hex }}" | quote }}
+highlight = {{ "{{ colors.primary.default.hex }}" | quote }}
+
+[urgency_low]
+timeout = 3
+
+[urgency_normal]
+timeout = 5
+
+[urgency_critical]
+timeout = 0

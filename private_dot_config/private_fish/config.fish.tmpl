@@ -2,7 +2,7 @@ if status is-interactive
 
     {{ if eq .chezmoi.os "linux" -}}
     if uwsm check may-start
-        exec uwsm start -S hyprland.desktop # '-S': Use 'Slice'
+        exec uwsm start hyprland.desktop
     end
     {{- end }}
 

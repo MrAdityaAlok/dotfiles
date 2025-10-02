@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# I cannot make it an alias. It causes SIGSEGV.
+{{- $editor := eq .editor "neovide" | ternary "neovide --fork" .editor }}
+app2unit -- {{ $editor }} "$@"

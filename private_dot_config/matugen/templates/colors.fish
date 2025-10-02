@@ -1,8 +1,8 @@
 fish_color_normal normal
 fish_color_command {{colors.primary.default.hex_stripped}}
-fish_color_param {{colors.secondary.default.hex_stripped | set_lightness: -2.0}}
+fish_color_param {{colors.secondary.default.hex_stripped}}
 fish_color_quote {{colors.tertiary.default.hex_stripped}}
-fish_color_end {{colors.tertiary_fixed_dim.default.hex_stripped | set_lightness: -5.0}}
+fish_color_end {{colors.tertiary_fixed_dim.default.hex_stripped}}
 fish_color_comment {{colors.outline_variant.default.hex_stripped}}
 fish_color_error {{colors.error.default.hex_stripped}}
 fish_color_autosuggestion {{colors.outline.default.hex_stripped}}
@@ -21,14 +21,13 @@ fish_color_host_remote yellow
 fish_color_keyword {{colors.secondary.default.hex_stripped}}
 fish_color_match {{colors.tertiary.default.hex_stripped}}
 fish_color_operator {{colors.tertiary.default.hex_stripped}}
-fish_color_option {{colors.secondary_fixed_dim.default.hex_stripped | set_lightness: -5.0}}
+fish_color_option {{colors.secondary_fixed_dim.default.hex_stripped}}
 
 fish_color_search_match bryellow '--background=brblack'
 fish_color_selection '{{colors.secondary_container.default.hex_stripped}}' --bold '--background=brblack'
 fish_color_status red
 fish_color_user brgreen
 fish_color_valid_path --underline
-
 
 fish_pager_color_background
 fish_pager_color_completion normal

@@ -1,8 +1,7 @@
 /* ---- Configuration ---- */
 configuration {
-    run-command:                "uwsm-app -- {cmd}";
-    run-shell-command:          "uwsm-app -- {terminal} -e {cmd}";
-    modi:                       "drun,run";
+    run-command:                "app2unit -- {cmd}";
+    modi:                       "drun";
     font:                       "{{ .theme.settings.font.rofi.name }} {{ .theme.settings.font.rofi.size }}";
     show-icons:                 true;
     icon-theme:                 "{{ index .theme.settings "icon-theme" }}";
