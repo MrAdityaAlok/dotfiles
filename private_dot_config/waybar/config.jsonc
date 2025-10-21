@@ -11,15 +11,14 @@
   ],
   
   "modules-center": [
-    "clock",
-    "custom/calendar"
+    "clock"
   ],
   
   "modules-right": [
     "idle_inhibitor",
     "custom/night-light",
     "bluetooth",
-    "pulseaudio",
+    "wireplumber",
     "network",
     "memory",
     "battery",
@@ -52,13 +51,7 @@
     "tooltip": true,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  
-  "custom/calendar": {
-    "format": "",
-    // "on-click": "swaync-client -t -sw",
-    "tooltip": false
-  },
-  
+
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -138,12 +131,10 @@
     // "on-click-right": "nm-applet"
   },
   
-  "pulseaudio": {
-    "format": "{icon} {volume}%{format_source}",
-    "format-bluetooth": "󰂰 {volume}%{format_source}",
-    "format-muted": "󰖁{format_source}",
-    "format-source": "",
-    "format-source-muted": " <span color='#f38ba8'>󰍭</span>",
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-muted": "󰖁",
     "format-icons": {
       "headphone": "󰋋",
       "hands-free": "󰄝",

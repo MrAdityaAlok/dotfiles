@@ -3,7 +3,8 @@ return {
     "rebelot/kanagawa.nvim",
     opts = {
       compile = true,
-      -- transparent = true,
+      transparent = true,
+      theme = "dragon",
     },
   },
   {

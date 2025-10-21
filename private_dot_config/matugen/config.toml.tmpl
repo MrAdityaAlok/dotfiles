@@ -42,6 +42,7 @@ post_hook = "pkill -USR1 cava || :"
 [templates.dunst]
 input_path = '{{ $templatePath }}/dunstrc'
 output_path = '~/.config/dunst/dunstrc'
+post_hook = "dunstctl reload"
 
 [templates.btop]
 input_path = '{{ $templatePath }}/btop.theme'
@@ -54,3 +55,7 @@ output_path = '~/.config/foot/colors.ini'
 [templates.hyprland]
 input_path = '{{ $templatePath }}/hyprland.conf'
 output_path = '~/.config/hypr/colors/hyprland.conf'
+
+[templates.fastfetch]
+input_path = '{{ $templatePath }}/fastfetch.jsonc'
+output_path = '~/.config/fastfetch/config.jsonc'

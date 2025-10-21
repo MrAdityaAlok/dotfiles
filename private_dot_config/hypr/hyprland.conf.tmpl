@@ -4,13 +4,7 @@ monitorv2 {
   position = auto
   scale = auto
   bitdepth = 10
-  # cm = hdr
-  supports_wide_color = 1
-  supports_hdr = 1
-  # sdr_min_luminance = 0.005
-  # sdrbrightness = 1.2
-  # sdrsaturation = 1.3
-  # vrr = 1
+  vrr = 1
 }
 
 $config = ~/.config/hypr/config
@@ -54,25 +48,27 @@ general {
 decoration {
   rounding = 10
   rounding_power = 4.0
-  # dim_inactive = true
+
   shadow {
-    range = 4
-    render_power = 3
+    range = 10
+    render_power = 2
+    color = rgba(000000b3)
+    # ignore_window = true
   }
 
   blur {
     enabled = true
-    size = 2
-    passes = 5
-    brightness = 0.45
-    noise = 0.02
-    contrast = 1.0
-    vibrancy = 0.2
+    size = 8
+    passes = 3
+    brightness = 0.8172
+    noise = 0.0200
+    contrast = 1.5
+    vibrancy = 0.169
     ignore_opacity = true
     popups = true
     special = false
     xray = false
-    }
+  }
 }
 
 # debug:disable_logs = false
