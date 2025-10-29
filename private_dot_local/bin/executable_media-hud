@@ -136,7 +136,7 @@ usage() {
 case "$1" in
 volume_up) volume "up" ;;
 volume_down) volume "down" ;;
-volume_toggle) volume "mute" ;;
+volume_toggle) volume "toggle" ;;
 
 mic_toggle) mic_toggle ;;
 

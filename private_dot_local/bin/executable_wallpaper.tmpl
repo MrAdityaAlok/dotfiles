@@ -2,9 +2,6 @@
 
 set -eufo pipefail
 
-export SWWW_TRANSITION_FPS=60
-export SWWW_TRANSITION_STEP=2
-
 usage() {
   echo "Usage: $(basename "$0") <path_to_wallpaper>"
   exit 1
@@ -21,15 +18,16 @@ info() {
 
 test -z "${1:-}" && usage
 wallpaper_path="$1"
-test -f "$wallpaper_path" || error "Wallpaper file '${wallpaper_path}' does not exist"
+test -f "$wallpaper_path" || error "Wallpaper file '$wallpaper_path' does not exist"
 
-info "Running matugen ..."
-if ! matugen image "$wallpaper_path" \
+info "Setting wallpaper..."
+hyprctl hyprpaper reload , "$wallpaper_path" || error "Failed to set wallpaper"
+
+info "Running matugen..."
+matugen image "$wallpaper_path" \
   -t {{ .theme.settings.matugen.scheme }} \
   -m {{ .theme.settings.matugen.mode }} \
   -r {{ index .theme.settings.matugen "resize-filter" }} \
-  --contrast {{ .theme.settings.matugen.contrast }}; then
-  error "Failed to run matugen"
-fi
+  --contrast {{ .theme.settings.matugen.contrast }} || error "Failed to run matugen"
 
 info "Done."

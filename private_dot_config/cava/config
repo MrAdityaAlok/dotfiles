@@ -1,0 +1,17 @@
+[color]
+background = 'default'
+# @MATUGEN_BEGIN@
+foreground = '#86d1e9'
+
+gradient = 1
+gradient_color_1 = '#004e5f'
+gradient_color_2 = '#86d1e9'
+gradient_color_3 = '#b2ebff'
+
+horizontal_gradient = 0
+horizontal_gradient_color_1 = '#004e5f'
+horizontal_gradient_color_2 = '#86d1e9'
+horizontal_gradient_color_3 = '#b2ebff'
+horizontal_gradient_color_4 = '#86d1e9'
+horizontal_gradient_color_5 = '#004e5f'
+# @MATUGEN_END@

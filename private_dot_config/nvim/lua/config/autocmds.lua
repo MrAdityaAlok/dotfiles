@@ -10,6 +10,7 @@
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "bash", "sh" },
   callback = function()
+    vim.cmd("setlocal noexpandtab tabstop=4 shiftwidth=4")
     vim.lsp.start({
       cmd = { "/home/mradityaalok/.local/bin/termux-language-server" },
       root_dir = vim.fn.getcwd(), -- Use PWD as project root dir.

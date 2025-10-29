@@ -9,9 +9,9 @@ frame_width = 2
 
 sort = yes
 
-font = "{{ .theme.settings.font.system.regular }} {{ .theme.settings.font.system.size }}"
+font = "Adwaita Sans 11"
 
-icon_theme = "{{ index .theme.settings "icon-theme" }}"
+icon_theme = "Papirus"
 enable_recursive_icon_lookup = true
 
 corner_radius = 10
@@ -20,8 +20,10 @@ corner_radius = 10
 
 markup = full
 background = "#11111b80"
-frame_color = {{ "{{ colors.outline.default.hex }}" | quote }}
-highlight = {{ "{{ colors.primary.default.hex }}" | quote }}
+# @MATUGEN_BEGIN@
+frame_color = "#899296"
+highlight = "#86d1e9"
+# @MATUGEN_END@
 
 [urgency_low]
 timeout = 3

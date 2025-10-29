@@ -1,0 +1,49 @@
+[config]
+version_check = false
+caching = true
+
+[config.wallpaper]
+command = ""
+set = false
+
+[templates.matugen-helper]
+input_path = "./templates/matugen-helper"
+output_path = "~/.cache/matugen/colors/helper.env"
+post_hook = "matugen-helper"
+
+[templates.fish]
+input_path = "./templates/colors.fish"
+output_path = "../fish/themes/matugen.theme"
+
+[templates.btop]
+input_path = './templates/btop.theme'
+output_path = '../btop/themes/matugen.theme'
+
+[templates.rofi]
+input_path = "./templates/rofi.rasi"
+output_path = "~/.cache/matugen/colors/rofi.rasi"
+
+[templates.gtk]
+input_path = "./templates/gtk.css"
+output_path = "~/.cache/matugen/colors/gtk.css"
+
+[templates.waybar]
+input_path = "./templates/waybar.css"
+output_path = "~/.cache/matugen/colors/waybar.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.foot]
+input_path = './templates/foot.ini'
+output_path = '~/.cache/matugen/colors/foot.ini'
+
+[templates.hyprland]
+input_path = './templates/hyprland.conf'
+output_path = '~/.cache/matugen/colors/hyprland.conf'
+
+[templates.hyprlock]
+input_path = "./templates/hyprlock.conf"
+output_path = "~/.cache/matugen/colors/hyprlock.conf"
+
+[templates.hyprpaper]
+input_path = "./templates/hyprpaper.conf"
+output_path = "~/.cache/matugen/colors/hyprpaper.conf"
